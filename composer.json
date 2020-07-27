@@ -1,0 +1,19 @@
+{
+    "name": "felice/checker",
+    "authors": [
+        {
+            "name": "Muhammad Iqmal",
+            "email": "iqmal@docker.my"
+        }
+    ],
+    "require": {
+        "phpcompatibility/php-compatibility": "^9.3"
+    },
+    "require-dev": {
+        "rector/rector": "^0.7.54"
+    },
+    "scripts": {
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
+        "post-update-cmd" : "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility"
+    }
+}
